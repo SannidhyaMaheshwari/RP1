@@ -1,0 +1,19 @@
+
+okay so the flow is that first we will upload master table csv file which will populate the data in master table these are the student who have applied for the admission in the college, now we will upload iteration offer 1 csv which will populate iterration offer table which consist of details about which student got which college in itterration 1 and initially the status will be nill of status field.
+
+Based on the current date of upload of iterration offer table csv we will make changes to the Iteration_date table, where iteration date will be date of upload of iteration offer csv and iteration field would be itr_no from iteration offer csv. 
+
+Now we will upload the fees paid csv which will populate the fees paid table. based on the upload date which is the system date we will calculate the latest iteration from Iteration date table, based on this , we will change the status  in iteration offer table for the latest iteration and application number.
+
+There are three status values accepted,upgrade and withdrawl.
+
+accept is when The student has paid both tuition fees and admission fees.
+( tution_fees_status = true AND admission_fees_status = true )
+
+upgrade is when the student has paid only admission fees but not tuition fees.
+( admission_fees_status = true AND tution_fees_status = false )  
+
+Withdrawls is when the student has not paid either of the fees.
+( tution_fees_status = false AND admission_fees_status = false )
+
+Now we will proceed ahead with the second iteration and post second iteration offer csv and the whole process will start again.

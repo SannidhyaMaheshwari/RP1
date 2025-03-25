@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "latest",
+    "recharts": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.8"
+  }
+}
